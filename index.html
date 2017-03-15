@@ -12,18 +12,20 @@
     	
       <section id = "test_wrap">
 
-      	 <div id = "primer-prv">
-      	 	<input type="text" id="in_var1" value="0" placeholder="?" disabled class="in_var">
-			<input type="text" id="math_act" value="+" placeholder="?" disabled class="in_var">
-			<input type="text" id ="in_var2" value="0" placeholder="?" disabled class="in_var left-mg">
-			<input type="text" id ="znak" value="=" placeholder="?" class="in_var left-mg" disabled>
-			<input type="text" id ="result" value="0" placeholder="?"  class="in_var left-mg" maxlength="2" disabled >
+      	 <section id = "primer-wrap">
+      	 	<input type="text" class="input-primer" id="input-pr-1" value="0" placeholder="?" disabled>
+			<input type="text" class="input-primer" id="math_act" value="+" placeholder="?" disabled>
+			<input type="text" class="input-primer left-mg" id ="input-pr-2" value="0" placeholder="?" disabled>
+			<input type="text" class="input-primer left-mg" value="=" placeholder="?"  disabled>
+			<input type="text" class="input-primer left-mg" id ="result" value="0" placeholder="?" maxlength="2" disabled >
 
-      	 </div>
+      	 </section>
 
          <section id="duga-wrap">
-			<input type="text" value="" class="input-cav" id="in_wrap_1"  maxlength = "1" placeholder="?" autofocus>
-			<input type="text" value="" class="input-cav" id="in_wrap_2" maxlength = "1" placeholder="?" disabled hidden>
+
+			<input type="text" class="input-answer-min" id="input-an-1" value="" maxlength = "1" placeholder="?" autofocus>
+			<input type="text" class="input-answer-min top-mg" id="input-an-2" value="" maxlength = "1" placeholder="?" disabled hidden>
+
 				<canvas id="myCanvas" width="845" height="120"> Your browser does not support the HTML5 canvas tag. </canvas> 
 				<span id="ar1" class="arrow"> </span>
 				<span id="ar2" class="arrow hidden"> </span>
