@@ -3,8 +3,8 @@
 /*    ---------  All var here!! -------*/
         var one_step = 39.28;                     // одно деление на спрайте в пикселях
         console.group('Start debug...')
-        var ID_in_wrap_1 = document.getElementById('in_wrap_1');
-        var ID_in_wrap_2 = document.getElementById('in_wrap_2');
+        var ID_in_wrap_1 = document.getElementById('input-pr-1"');
+        var ID_in_wrap_2 = document.getElementById('input-pr-2"');
         var ID_result = document.getElementById('result');
         var ID_arr_1 = document.getElementById('ar1');
         var ID_arr_2 = document.getElementById('ar2');
@@ -22,15 +22,15 @@
 		    document.getElementById( 'in_var2' ).value = var_2;
 		    document.getElementById( 'result' ).value = '?';
 
- /* ---------- Functions ------- */  
+ /* ---------- Functions ------- */
 
-      function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min)) + min; } 
+      function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
       function setError(id, in_var){
           if (in_var !== undefined) document.getElementById(in_var).style.backgroundColor = '#CC9900';
           id.style.color = 'red';
           errorenId = id;
           setTimeout(function(){
-            id.style.color = '#000' 
+            id.style.color = '#000'
           },1000);
       }
 
@@ -44,7 +44,7 @@
 			ID_in_wrap_1.style.left = ((one_step*var_1)/2)-12.5+'px';
       ID_arr_1.style.left = (one_step*var_1)-15+'px';
       // console.log('left',ID_arr_1.style.left);
-            
+
 
 
 
@@ -77,7 +77,7 @@
              }
          }
     }
-      
+
 
 
              ID_in_wrap_2.onkeydown = function(e){
@@ -99,7 +99,7 @@
          }
      }
 
-      
+
       ID_result.onkeydown = function(e){
          if(e.keyCode == 13){
            var rr = parseInt(ID_result.value);
