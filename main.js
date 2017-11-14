@@ -3,8 +3,10 @@
 /*    ---------  All var here!! -------*/
         var one_step = 39.28;                     // одно деление на спрайте в пикселях
         console.group('Start debug...')
+
         var ID_in_wrap_1 = document.getElementById('in_wrap_1');
         var ID_in_wrap_2 = document.getElementById('in_wrap_2');
+
         var ID_result = document.getElementById('result');
         var ID_arr_1 = document.getElementById('ar1');
         var ID_arr_2 = document.getElementById('ar2');
