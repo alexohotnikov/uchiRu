@@ -1,4 +1,106 @@
 * {
+	 margin: 0px;
+	 padding: 0px;
+     font-family: 'Roboto', sans-serif;
+  }
+
+#test_wrap {
+	  	width: 875px;
+	  	height: 400px;
+	  	margin:0 auto;
+	  	padding-top: 80px;
+	  	position: relative;
+	  	text-align: center;
+		   }
+
+#primer-prv {
+        color: black;
+        font-size: 2.9em;
+
+		  }
+
+
+#inter-wrap {
+	  	background-color: red;
+	  	width:875px;
+	  	height:83px;
+	  	background:url(static/sprite.png);
+	  	margin-top: 100px;
+		  }
+
+
+
+#duga-wrap {
+
+	  	width: 845px;
+	  	height: 200px;
+	  	position: absolute;
+	  	margin-left: 34px;
+
+		  }
+
+canvas {
+	  	display: block;
+	    border: 0px none black;
+	    }
+
+.input-cav {
+	  	 width: 25px;
+	  	 font-size:30px;
+	  	 height: 25px;
+	  	 text-align: center;
+	     background-color: white;
+	     border: 2px solid #ccc;
+	     border-radius: 5px;
+	     position: absolute;
+	     top:20px;
+	     left: 100px;
+	     color:black;
+	     outline: none;
+	     -webkit-transition: color 0.6s ease-in;
+  	 	-moz-transition: color 0.6s ease-in;
+  	 	-o-transition: color 0.6s ease-in;
+        transition: color 0.6s ease-in;
+           }
+
+.in_var {
+
+       	text-align: center;
+  	 	width:55px;
+  	 	background-color: white;
+  	 	border:none;
+  	 	font-size:50px;
+  	 	border-radius: 10px;
+	  	-webkit-transition: background-color 0.6s ease-in;
+  	 	-moz-transition: background 0.6s ease-in;
+  	 	-o-transition: background 0.6s ease-in;
+        transition: background 0.6s ease-in;
+	  	-webkit-transition: color 0.6s ease-in;
+  	 	-moz-transition: 0.6s ease-in;
+  	 	-o-transition:0.6s ease-in;
+        transition: 0.6s ease-in;
+           }
+.arrow {
+	display: block;
+    width: 15px;
+    height: 15px;
+    background: url(static/arrow.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: rotate(220deg);
+    top:107px;
+}
+
+.hidden{
+	display: none;
+}
+
+
+.left-mg {
+       	   margin-left: -10px;
+           }
+=======
+* {
 	margin: 0px;
 	padding: 0px;
 	font-family: 'Roboto', sans-serif;
