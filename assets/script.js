@@ -54,7 +54,7 @@ function CheckInput( input_varible, prog_varible, an_id, pr_id = false ) {
     if ( pr_id != false ) pr_id.classList.remove( 'error-pr' );
     setTimeout( function() {
       an_id.classList.remove( 'win-in-an' );
-    }, 1000 );
+    }, 600 );
     if ( state.checkStep == 0 ) {
       var ok = ( props.step * var_1 ) + ( props.step * var_2 );
       $Dom.arrays[1].classList.remove( 'hidden' );
@@ -76,7 +76,7 @@ function CheckInput( input_varible, prog_varible, an_id, pr_id = false ) {
     an_id.classList.add( 'reded' );
     setTimeout( function() {
       an_id.classList.remove( 'reded' );
-    }, 1000 );
+    }, 600 );
     return false;
   }
 }
