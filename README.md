@@ -1,2 +1,6 @@
-# uchi_ru_JS
-Решение тестового задания для Uchi_ru. JavaScript
+# UCHi.RU
+
+Моё решение тестового задания.
+
+[Demo|https://alexohotnikov.github.io/uchi_ru_JS/]
+
