@@ -4,7 +4,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 
-#test_wrap {
+#scene {
 	width: 875px;
 	height: 400px;
 	margin: 0 auto;
@@ -13,7 +13,7 @@
 	text-align: center;
 }
 
-#primer-wrap {
+#ex-wrap {
 	color: black;
 	font-size: 2.9em;
 }
@@ -69,7 +69,7 @@ canvas {
 	color: green;
 }
 
-.input-primer {
+.input-ex {
 	text-align: center;
 	width: 55px;
 	background-color: white;

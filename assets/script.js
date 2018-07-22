@@ -1,6 +1,5 @@
 /*    ---------  All var here!! -------*/
 var oneStep = 39.28; // одно деление на спрайте в пикселях
-// console.group('Start debug...');
 var checkStep = 0;
 var idInAn_1 = document.getElementById( 'input-an-1' );
 var idInAn_2 = document.getElementById( 'input-an-2' );
