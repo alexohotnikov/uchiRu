@@ -1,21 +1,34 @@
 /*    ---------  All var here!! -------*/
-var oneStep = 39.28; // одно деление на спрайте в пикселях
-var checkStep = 0;
-var idInAn_1 = document.getElementById( 'input-an-1' );
-var idInAn_2 = document.getElementById( 'input-an-2' );
-var idOutPr_1 = document.getElementById( 'input-pr-1' );
-var idOutPr_2 = document.getElementById( 'input-pr-2' );
-var idResult = document.getElementById( 'result' );
-var idArr_1 = document.getElementById( 'ar1' );
-var idArr_2 = document.getElementById( 'ar2' );
-var c = document.getElementById( "myCanvas" );
-var ctx = c.getContext( "2d" );
+const $Dom = {
+  inputForAnswer:
+    [ document.getElementById( 'input-an-1' ), document.getElementById( 'input-an-2' ) ],
+  expOut:
+    [ document.getElementById( 'input-pr-1' ), document.getElementById( 'input-pr-2' ) ],
+  result:
+    document.getElementById( 'result' ),
+  arrays:
+    [ document.getElementById( 'ar1' ), document.getElementById( 'ar2' ) ],
+};
+
+const props = {
+  step: 39.28
+}
+
+const state = {
+  checkStep: 0
+}
+
+
+const c = document.getElementById( "myCanvas" );
+const ctx = c.getContext( "2d" );
+
+
 /* ------- Рандомом инициализируем сам задачку школьнику -----------  */
 var var_1 = getRandomInt( 6, 9 );
 var sum = getRandomInt( 11, 14 );
 var var_2 = sum - var_1;
-idOutPr_1.value = var_1;
-idOutPr_2.value = var_2;
+$Dom.expOut[0].value = var_1;
+$Dom.expOut[1].value = var_2;
 document.getElementById( 'result' ).value = '?';
 /* ---------- Functions ------- */
 function getRandomInt( min, max ) {
@@ -42,21 +55,21 @@ function CheckInput( input_varible, prog_varible, an_id, pr_id = false ) {
     setTimeout( function() {
       an_id.classList.remove( 'win-in-an' );
     }, 1000 );
-    if ( checkStep == 0 ) {
-      var ok = ( oneStep * var_1 ) + ( oneStep * var_2 );
-      idArr_2.classList.remove( 'hidden' );
-      idInAn_2.hidden = false;
-      idInAn_2.style.left = ( ok / 2 );
-      idInAn_2.disabled = false;
-      idInAn_2.focus();
-      canvasDraw( ok - ( ( oneStep * var_2 ) / 2 ), ok, idInAn_2, idArr_2, oneStep * var_1, 50 );
+    if ( state.checkStep == 0 ) {
+      var ok = ( props.step * var_1 ) + ( props.step * var_2 );
+      $Dom.arrays[1].classList.remove( 'hidden' );
+      $Dom.inputForAnswer[1].hidden = false;
+      $Dom.inputForAnswer[1].style.left = ( ok / 2 );
+      $Dom.inputForAnswer[1].disabled = false;
+      $Dom.inputForAnswer[1].focus();
+      canvasDraw( ok - ( ( props.step * var_2 ) / 2 ), ok, $Dom.inputForAnswer[1], $Dom.arrays[1], props.step * var_1, 50 );
     }
-    if ( checkStep == 1 ) {
-      idResult.disabled = false;
-      idResult.focus();
-      idResult.value = "";
+    if ( state.checkStep == 1 ) {
+      $Dom.result.disabled = false;
+      $Dom.result.focus();
+      $Dom.result.value = "";
     }
-    checkStep++;
+    state.checkStep++;
     return true;
   } else {
     if ( pr_id != false ) pr_id.classList.add( 'error-pr' );
@@ -68,19 +81,19 @@ function CheckInput( input_varible, prog_varible, an_id, pr_id = false ) {
   }
 }
 /*  ----------------------    */
-canvasDraw( oneStep * var_1 / 2, oneStep * var_1, idInAn_1, idArr_1, 0, 0 );
-idInAn_1.onkeydown = function( e ) {
+canvasDraw( props.step * var_1 / 2, props.step * var_1, $Dom.inputForAnswer[0], $Dom.arrays[0], 0, 0 );
+$Dom.inputForAnswer[0].onkeydown = function( e ) {
   if ( e.keyCode == 13 ) {
-    CheckInput( parseInt( idInAn_1.value ), var_1, idInAn_1, idOutPr_1 );
+    CheckInput( parseInt( $Dom.inputForAnswer[0].value ), var_1, $Dom.inputForAnswer[0], $Dom.expOut[0] );
   }
 }
-idInAn_2.onkeydown = function( e ) {
+$Dom.inputForAnswer[1].onkeydown = function( e ) {
   if ( e.keyCode == 13 ) {
-    CheckInput( parseInt( idInAn_2.value ), var_2, idInAn_2, idOutPr_2 );
+    CheckInput( parseInt( $Dom.inputForAnswer[1].value ), var_2, $Dom.inputForAnswer[1], $Dom.expOut[1] );
   }
 }
-idResult.onkeydown = function( e ) {
+$Dom.result.onkeydown = function( e ) {
   if ( e.keyCode == 13 ) {
-    CheckInput( parseInt( idResult.value ), sum, idResult, false );
+    CheckInput( parseInt( $Dom.result.value ), sum, $Dom.result, false );
   }
 }
